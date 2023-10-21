@@ -36,6 +36,7 @@ def test_evaluate_operations():
     assert evaluate(["-", ["NUMBER",9], ["NUMBER",2]]) == 7
     assert evaluate(["*", ["NUMBER",4], ["NUMBER",2]]) == 8
     assert evaluate(["/", ["NUMBER",9], ["NUMBER",3]]) == 3
+    assert evaluate(['+', ['+', ['NUMBER', 3.0], ['*', ['NUMBER', -4.0], ['NUMBER', 3.0], 1], 1], ['*', ['NUMBER', 4.0], ['NUMBER', 5.0], -1], 1])  == -29.0
 
 def test_evaluate_print():
     evaluate(["print",["+",["NUMBER",9],["NUMBER",12]]])
